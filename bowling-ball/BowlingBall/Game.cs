@@ -8,10 +8,13 @@ namespace BowlingBall
 {
     public class Game:IGame
     {
+        #region Fields
         private List<int> _rolls = new List<int>(21);
         private int _currentRole = 0;
         public int Score { get; set; }
+        #endregion
 
+        #region ctor
         public Game()
         {
             for (int i = 0; i < 22; i++)
@@ -19,7 +22,9 @@ namespace BowlingBall
                 _rolls.Add(0);
             }
         }
+        #endregion
 
+        #region Public Methods
         public void Roll(int pins)
         {
             // Add your logic here. Add classes as needed.
@@ -58,6 +63,7 @@ namespace BowlingBall
 
             return score;
         }
+        #endregion
 
         #region private methods
 
